@@ -8,11 +8,12 @@ const app = axios.create({
 })
 const baseURL = process.env.NEXT_PUBLIC_URL+"/auth"
 export const authProvider = {
-    login: (username,password) => {
-      return app.post(baseURL+"/login",{
+    login: async(username,password) => {
+      return ( app.post(baseURL+"/login",{
         username: username,
         password:password
-      })
+      })).then((token=>{token.data
+         console.log(token.data)}))
     },
   
     createUser: (username, name, password, email) => {
