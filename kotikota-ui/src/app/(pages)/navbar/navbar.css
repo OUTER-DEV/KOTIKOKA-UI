@@ -1,0 +1,63 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+.logo{
+    height: 90px;
+    width: 90px;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+}
+
+.user{
+    height: 35px;
+    width: 35px;
+
+}
+.research{
+    height: 30px;
+    width: 30px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search input{
+    
+    background-color: rgb(173, 236, 233);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 6vh;
+    padding-left: 2vh;
+    border-radius: 5px;
+    margin-left: 1.5vh;
+    margin-right: 2vh;
+}
+
+.login a{
+    color: rgb(58, 131, 165);
+    text-decoration: none;
+    font-family: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2vh;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 3vh;
+}
