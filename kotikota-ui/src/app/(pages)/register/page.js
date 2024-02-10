@@ -26,7 +26,8 @@ const Register = () => {
       <>
       <body>
       <nav>
-          <Link href="/">Go to main</Link>
+          <img src="/images/retour.png" alt="retour"/>
+          <Link href="/"><p>Go to main</p></Link>
         </nav>
 
         <div className="container">
@@ -42,7 +43,10 @@ const Register = () => {
             <br />
             <input type="password" placeholder="mot de" name="password" />
             <br />
+            
               <button type="submit">Créer un compte</button>
+           
+              
           </form>
           </div>
       </body>

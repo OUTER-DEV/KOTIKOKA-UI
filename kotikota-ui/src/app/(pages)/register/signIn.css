@@ -5,6 +5,24 @@
 
 body{
     background-image: url(/images/backgroundLogin.png);
+    background-size: cover;
+}
+
+nav img{
+    height:40px;
+    width: 40px;
+    margin-right: 2vh;
+}
+nav p{
+    font-size: 20px;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2vh;
+
 }
 .container{
     background-color: rgb(197, 227, 235);
@@ -28,6 +46,7 @@ input{
     margin-bottom: 1vh;
     margin-top: 2vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
 
     
 }
@@ -57,3 +76,4 @@ button{
 button:hover{
     transform: scale(1.2);
 }
+
