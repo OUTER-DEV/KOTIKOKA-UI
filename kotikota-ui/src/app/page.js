@@ -1,7 +1,6 @@
 "use client"
 import React, {useState, useEffect} from "react";
 import "./style.css"
-import { dataProvider } from "@/app/providers/projects/project";
 import Link from "next/link";
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
