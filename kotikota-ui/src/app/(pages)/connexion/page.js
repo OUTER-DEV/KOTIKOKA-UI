@@ -14,7 +14,8 @@ const Login = () => {
 
     try {
       await authProvider.login(username, password);
-      router.push("/home");
+
+      router.push("/accueil");
     } catch (error) {
       console.error(error);
     }

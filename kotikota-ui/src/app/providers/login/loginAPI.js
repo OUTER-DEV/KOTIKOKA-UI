@@ -8,15 +8,6 @@ const app = axios.create({
 })
 const baseURL = process.env.NEXT_PUBLIC_URL+"/auth"
 export const authProvider = {
-  login: async (username, password) => {
-    const user = await app.post(baseURL + "/login", {
-      "username": username,
-      "password": password
-    });
-    console.log(user.status);
-    return user.data;
-  },
-
   createUser: async (username, name, password, email) => {
     const response = await app.post(baseURL + "/signup", {
       "username": username,
@@ -26,4 +17,25 @@ export const authProvider = {
     });
     return response.data;
   },
+
+  login: async (username, password) => {
+    const user = await app.post(baseURL + "/login", {
+      "username": username,
+      "password": password
+    });
+    console.log(user.data);
+    return user.data;
+  },
+
+  whoami: async (token) => {
+    return app.get("/whoami",{
+      headers:{
+        Authorization:"Bearer Token "+token
+      }
+    }).then((user)=>{
+      return user.data;
+    }).catch((e)=>{
+      throw e;
+    })
+  }
 };
