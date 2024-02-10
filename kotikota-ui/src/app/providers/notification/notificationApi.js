@@ -12,9 +12,6 @@ const app = axios.create({
 export  const NotificationProvider = {
   getNotification: async (userId) => {
     return app.get(baseURL+"/"+userId,{
-      headers:{
-        Authorization:"Bearer Token "+token
-      }
     }).then((user)=>{
       return user;
     }).catch((e)=>{

@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from "react";
 import "./style.css"
 import Link from "next/link";
-import NotificationBanner from "./components/notification/notificationbanner";
 import { NotificationProvider } from "./providers/notification/notificationApi";
 export default  function Home() {
   const [scrolled, setScrolled] = useState(false);

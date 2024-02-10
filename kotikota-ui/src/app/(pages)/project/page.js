@@ -6,9 +6,6 @@ import '../project/page.css';
 import Buton from './component/buton';
 import Desc from './component/desc';
 import Question from './component/question';
-import { dataProvider } from "@/app/providers/projects/project";
-import { useRouter } from 'next/navigation';
-
 
 const ProjectForm = () => {
   const [title, setTitle] = useState("");
