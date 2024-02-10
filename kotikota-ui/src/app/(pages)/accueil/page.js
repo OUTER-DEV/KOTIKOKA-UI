@@ -1,6 +1,7 @@
 "use client"
 import React, {useState, useEffect} from "react";
 import "./style.css"
+import { dataProvider } from "@/app/providers/projects/project";
 const Home = ()=>{
     const [scrolled, setScrolled] = useState(false);
 
@@ -16,10 +17,14 @@ const Home = ()=>{
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+ /** fetchImage = ()=>{
+dataProvider.getAll()
+  } */
     return(
         <>
          <div className="header">
-        <nav className={scrolled ? '_fix scrolled' : '_fix'}>
+          <nav className={scrolled ? '_fix scrolled' : '_fix'}>
             <img className="logo" src="/images/mainLogo.png" alt="Logo"/>
             <div className="options">
                 <div className="login">
@@ -35,7 +40,7 @@ const Home = ()=>{
 
         <div className="titleHeader">
             <div className="title">
-                <h1>Donnez vie aux rêves</h1>
+                <p className="subtitle">Donnez vie aux rêves</p>
                 <div className="p1">
                     <p >Bienvenue sur Kotikota </p>
                 <p >votre plateforme de financement participatif!</p>
@@ -68,6 +73,11 @@ const Home = ()=>{
         </div>
         
         <div className="projectsImg">
+          <div>
+            {
+
+            }
+          </div>
             <div className="img1">
               <img src="/images/projects/animals.jpg" alt="animals"/>
               <h3>MyHome</h3>

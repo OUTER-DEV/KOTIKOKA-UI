@@ -81,7 +81,12 @@ nav{
 .title{
     padding-right: 20vh;
 }
-
+.subtitle{
+    font-size: 22px;
+    margin-top: 15%;
+    color: rgba(14, 14, 204, 0.883);
+    font-weight: 200;
+}
 
 h1{
     font-size: 60px;
@@ -92,9 +97,10 @@ h1{
 }
 
 .p1{
-    font-size: 40px;
+    font-size: 33px;
     margin-left: 5vh ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font:bolder;
     margin-bottom: 4vh;
 }
