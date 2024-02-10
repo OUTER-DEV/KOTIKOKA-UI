@@ -1,10 +1,12 @@
 "use client"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+
 import './page.css'
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -64,12 +66,6 @@ user = {username, password}
       </div>
       <div className="_bg"></div>
 
-      <div>
-        #NOTIFICATION
-        <div>
-
-        </div>
-      </div>
     </div>
   );
 };

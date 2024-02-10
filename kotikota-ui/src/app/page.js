@@ -1,11 +1,23 @@
 "use client"
 import React, {useState, useEffect} from "react";
+import { faM } from "@fortawesome/free-solid-svg-icons";
 import "./style.css"
 import Link from "next/link";
 import { NotificationProvider } from "./providers/notification/notificationApi";
 export default  function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [notif,setNotif] = useState();
+  const [modal, setModal] = useState(false);
+
+  const handleClick= ()=>{
+    if(!modal) {
+      setModal(true)
+      Modal.ModalStyle = Style={display: none}
+    }
+    Modal.ModalStyle = Style= {display:absolute }
+
+    
+  }
   useEffect(() => {
 
     const fetchData = async () => {
@@ -38,11 +50,7 @@ export default  function Home() {
     
   }, []);
 
-
   
-   
-    
-
 
 
   return (
@@ -54,6 +62,10 @@ export default  function Home() {
                 <div className="login">
                     <img className="user" src="/images/login.png" alt=""/>
                     <Link href="/connexion" onClick={ document.location.reload}>SE CONNECTER</Link>
+                </div>
+                <Modal className={ModalStyle} content=""/>
+                <div className="notif">
+<p className="notification"><img onClick={handleClick} className="notif" src="/images/R.png"></img></p>
                 </div>
                 <div className="search">
                     <img className="research" src="/images/mainSearch.png" alt="research"/>
@@ -149,3 +161,12 @@ export default  function Home() {
   );
 }
 
+const Modal = (props)=>{
+  return(
+    <div className={props.ModalStyle}>
+    <div className="_content">
+      {props.content}
+    </div>
+    </div>
+  )
+}

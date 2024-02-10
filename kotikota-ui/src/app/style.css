@@ -8,7 +8,10 @@ body{
     background-attachment: fixed;
 }
 
-
+.notification{
+    margin-top: 1.5vh;
+    color: rgb(8, 90, 183);
+}
 nav{
     display: flex;
     flex-direction: row;
@@ -16,7 +19,10 @@ nav{
     justify-content: space-between;
 }
 
-
+._content{
+    border: solid 1px;
+    background-color: black;
+}
 .logo{
     height: 80px;
     width: 80px;
@@ -73,17 +79,27 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 3vh;
+    margin-right: 4vh;
 }
 
 .title{
     padding-right: 20vh;
 }
+.notif{
+    width: 60px;
+    height: 40px;
+    margin-bottom: 3px;
+}
+
 .subtitle{
     font-size: 22px;
     margin-top: 15%;
     color: rgba(14, 14, 204, 0.883);
     font-weight: 200;
+}
+.notification > button {
+background-color: #fdf7f700;
+border: 0;
 }
 
 h1{
