@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/images/backgroundLogin.png);
+}
+
+button img{
+    height: 40px;
+    width: 40px;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20vh;
+    padding-left: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: 1px solid rgb(235, 231, 231);
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: rgb(90, 183, 236);
+    border: none;
+}
+
+header img{
+    height: 90px;
+    width: 90px;
+    margin-right: 5vh ;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    color: rgb(52, 109, 233);
+    height: 10vh;
+}
+
