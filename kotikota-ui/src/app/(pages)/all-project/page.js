@@ -1,0 +1,1 @@
+import '../all-project/page.css'

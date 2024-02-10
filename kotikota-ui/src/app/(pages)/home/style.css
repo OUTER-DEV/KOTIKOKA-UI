@@ -109,7 +109,6 @@ h1{
 .titleHeader {
     display: flex;
     flex-direction: row;
-
 }
 
 .titleHeader img{
