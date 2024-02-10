@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { authProvider } from "@/app/providers/login/loginAPI"
+import './signIn.css';
 const Register = () => {
     const router = useRouter();
   
@@ -23,20 +24,31 @@ const Register = () => {
   
     return (
       <>
-        <nav>
+      <body>
+      <nav>
           <Link href="/">Go to main</Link>
         </nav>
-        <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="name" name="name" />
-          <br />
-          <input type="text" placeholder="username" name="username" />
-          <br />
-          <input placeholder="email" type="email" name="email" />
-          <br />
-          <input type="password" placeholder="password" name="password" />
-          <br />
-          <button type="submit">Create account</button>
-        </form>
+
+        <div className="container">
+          <h1>
+            INSCRIPTION
+          </h1>
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="nom" name="name" />
+            <br />
+            <input type="text" placeholder="Nom d'utilisateur" name="username" />
+            <br />
+            <input placeholder="e-mail" type="email" name="email" />
+            <br />
+            <input type="password" placeholder="mot de" name="password" />
+            <br />
+              <button type="submit">Créer un compte</button>
+          </form>
+          </div>
+      </body>
+
+        
+        
       </>
     );
   };
