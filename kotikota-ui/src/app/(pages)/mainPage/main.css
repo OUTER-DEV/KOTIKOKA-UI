@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.sections p {
+    font-size: 30px;
+    margin-left: 550px;
+    margin-top: 1vh;
+    color: black;
+}
+
+.fond {
+    background-image: url(/images/backHome.jpg);
+    background-size: cover;
+    z-index: 2;
+}
+
+.container1 {
+    margin-top: 3vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    z-index: -1;
+    padding-bottom: 30vh;
+}
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 440px;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 50px;
+    margin-right: 4vh;
+    color: antiquewhite;
+}
+
+p {
+    font-size: 30px;
+    margin-left: 385px;
+    color: aliceblue;
+}
+
+button {
+    margin-top: 13vh;
+    margin-bottom: 20vh;
+    border: none;
+    padding-top: 7vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 15vh;
+    margin-left: 600px;
+    background-color: rgb(170, 228, 243);
+    border-radius: 10px;
+}
+
+button:hover{
+    
+    transform: scale(0.9);
+}
