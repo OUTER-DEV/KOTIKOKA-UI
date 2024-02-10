@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { authProvider } from "@/app/providers/login/loginAPI";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 import './page.css'
 
 const Login = () => {
@@ -29,36 +31,37 @@ const Login = () => {
       <h1>CONNECTEZ-VOUS</h1>
       <form onSubmit={handleSubmit}>
         <label className="username">
-        <p>Nom d'utilisateur:</p>
+          <label className="_icon"> <FontAwesomeIcon style={{fontSize:"25px"}} icon={faUser}></FontAwesomeIcon></label>
           <input
             type="text"
+            className="_input"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="nom_d_utilisateur"
           />
         </label>
         <label className="password">
-          <p>Mot de passe:</p>
+          <label className="_icon"> <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLock}></FontAwesomeIcon></label>
           <input
             type="password"
+            className="_input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="password"
           />
         </label>
-        <br />
         <button type="submit">Se connecter</button>
       </form>
       </div>
 
       <div className="register">
         <img src="/images/signup.webp" alt="sign Up"/>
-      <Link href="/register">
-      <p>
+      <Link className="_link" href="/inscription">
         S'INSCRIRE
-        </p></Link>
+      </Link>
 
       </div>
+      <div className="_bg"></div>
     </div>
   );
 };
