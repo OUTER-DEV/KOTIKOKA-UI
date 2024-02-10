@@ -15,21 +15,59 @@ const newProject = await app.post(baseURL+"/launch",{
 
   "title": project.title,
   "description":project.description,
-  "category": project.category,
   "targetAmount": project.targetAmount,
-  "balance": project.balance,
   "deadline":project.deadline,
-  "ownerId": project.ownerId
+  "category": project.category,
+  "ownerId": project.id
+
 })
 return newProject;
 },
+
 getAll:async (accessToken)=>{
-    return app.get(baseURL+"/all?", {
+    return app.get(baseURL+"/all", {
+       
     }).then((data)=>{
-        return data;
+        return data.data;
     }).catch((e)=>{
          throw e;
         })
 },
+
+seeProject: async (accessToken)=>{
+  return app.get(baseURL+"/"+accessToken
+  ).then((data)=>{
+      return data;
+  }).catch((e)=>{
+    throw e;
+  })
+},
+
+contributeToProject: async (accessToken, projectId, contributionData) => {
+  try {
+    const response = await app.post(`${baseURL}/${projectId}/contribute`, contributionData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+},
+
+updateProject: async (accessToken, projectId, updateData) => {
+  try {
+    const response = await app.put(`${baseURL}/${projectId}/update`, updateData);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+},
+
+predictSuccessProbability: async (accessToken, projectId) => {
+  try {
+    const response = await app.get(`${baseURL}/${projectId}/predict`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
 
 }

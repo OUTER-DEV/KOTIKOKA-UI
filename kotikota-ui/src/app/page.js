@@ -7,6 +7,7 @@ import { NotificationProvider } from "./providers/notification/notificationApi";
 import { dataProvider } from "./providers/projects/project";
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
+  const [data,setData] = useState()
   
   useEffect(() => {
 
