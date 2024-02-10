@@ -25,11 +25,8 @@ return newProject;
 },
 getAll:async (accessToken)=>{
     return app.get(baseURL+"/all?", {
-         headers:{
-        Authorization:"Bearer "+accessToken
-      }
     }).then((data)=>{
-        return data.data;
+        return data;
     }).catch((e)=>{
          throw e;
         })

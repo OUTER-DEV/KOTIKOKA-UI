@@ -4,28 +4,24 @@ import "./style.css"
 import Link from "next/link";
 import NotificationBanner from "./components/notification/notificationbanner";
 import { NotificationProvider } from "./providers/notification/notificationApi";
-export default  function Home() {
+import { dataProvider } from "./providers/projects/project";
+export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-  const [notif,setNotif] = useState();
+  
   useEffect(() => {
 
-    const fetchData = async () => {
+    const fetchData = async()=>{
       try {
-        const response = await NotificationProvider.getNotification(1)
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        const fetchedData = await response.json();
-        console.log(fetchData)
-        setNotif(fetchedData);
-      } catch (error) {
-        console.error(error)
-      } 
-      
-    };
+        const response  = await dataProvider.getAll()
+        const notification = response.data
+        console.log(notification);
+        return notification
+       } catch (error) {
+         console.error(error);
+       }
+    }
 
-    fetchData();
-
+    fetchData()
     const handleScroll = () => {
       const isScrolled = window.scrollY > 0;
       setScrolled(isScrolled);
@@ -36,15 +32,11 @@ export default  function Home() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-    
   }, []);
 
+  
 
   
-   
-    
-
-
 
   return (
      <>
@@ -62,9 +54,6 @@ export default  function Home() {
                 </div>
             </div>
         </nav>
-      <>
-      {JSON.stringify(notif) } 
-      </>
        
         <div className="titleHeader">
             <div className="title">
