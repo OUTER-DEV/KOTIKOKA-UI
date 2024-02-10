@@ -28,12 +28,12 @@ const Login = () => {
       <h1>CONNECTEZ-VOUS</h1>
       <form onSubmit={handleSubmit}>
         <label className="username">
-        <p>User name:</p>
+        <p>Nom d'utilisateur:</p>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="user_name"
+            placeholder="nom_d_utilisateur"
           />
         </label>
         <label className="password">

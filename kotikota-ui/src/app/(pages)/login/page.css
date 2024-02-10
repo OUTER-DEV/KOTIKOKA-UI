@@ -49,7 +49,7 @@ h1 {
     padding-left: 1vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    padding-right: 8vh;
+    padding-right: -3vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
     transition: 1s;
@@ -65,7 +65,7 @@ h1 {
     padding-left: 1vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
-    padding-right: 5vh;
+    padding-right: 6vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
     transition: 1s;
