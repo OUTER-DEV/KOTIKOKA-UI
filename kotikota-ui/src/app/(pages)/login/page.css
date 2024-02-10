@@ -1,16 +1,21 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
+body {
+    background-image: url(/images/backgroundLogin.png);
+    background-size: cover;
+}
 
-.container{
+
+.container {
     background-color: rgb(197, 227, 235);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-h1{
+h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 40px;
     margin-left: 10vh;
@@ -21,52 +26,88 @@ h1{
 
 }
 
-.username p{
+.username label {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     color: rgb(12, 27, 68);
-    margin-left: 4vh;
-}
-.username{
-    display:flex;
-    flex-direction: row;
-    margin-bottom: 6vh;
+
 }
 
-.username input,
-.password input{
+.username {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6vh;
+    margin-left: 4vh;
+    align-items: center;
+
+
+}
+
+.username input {
     border: none;
     border-radius: 10px;
     padding-left: 1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 8vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    transition: 1s;
 }
-.password{
+
+.username input:hover {
+    transform: scale(1.1);
+}
+
+.password input {
+    border: none;
+    border-radius: 10px;
+    padding-left: 1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 5vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    transition: 1s;
+}
+
+.password input:hover {
+    transform: scale(1.1);
+}
+
+.password {
     display: flex;
     flex-direction: row;
+    margin-left: 4vh;
+    align-items: center;
 }
 
 
-.password p{
+.password p,
+.username p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(12, 27, 68);
-    margin-left: 6vh;
+    margin-left: 4vh;
+    margin-right: 1vh;
 
 }
-img{
+
+img {
     height: 400px;
     width: 500px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.login{
+.login {
     display: flex;
     flex-direction: row;
     margin-left: 30vh;
     margin-top: 20vh;
 }
 
-button{
+button {
     padding-top: 2vh;
     padding-bottom: 2vh;
     padding-right: 6vh;
@@ -78,10 +119,36 @@ button{
     margin-top: 8vh;
     margin-bottom: 5vh;
     transition: 1s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.2);
     background-color: antiquewhite;
     color: rgb(12, 24, 78);
+}
+
+.register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -19vh;
+    position: absolute;
+    right: 3vh;
+    transition: 0.8s;
+}
+
+.register p {
+    color: rgb(84, 154, 175);
+    margin-left: 2vh;
+}
+
+.register img{
+    height: 35px;
+    width: 35px;
+}
+
+.register:hover{
+    transform: scale(1.2);
 }
