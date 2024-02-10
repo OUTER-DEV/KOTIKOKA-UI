@@ -20,12 +20,6 @@ const newProject = await app.post(baseURL+"/launch",{
   "balance": project.balance,
   "deadline":project.deadline,
   "ownerId": project.ownerId
-  /*"percentageAchieved": project.percentageAchieved,
-  "numberOfContributors": project.numberOfContributors,
-  "username": project.owner.username,
-  "name":project.owner.name,
-  "email":project.owner.email,
-  "role": project.owner.role*/
 })
 return newProject;
 },
