@@ -144,3 +144,33 @@ textarea{
     display: flex;
     flex-direction: column;
 }
+.title-advice{
+    font-family: sofia-pro, sans-serif;
+    font-size: 25px;
+    line-height: 25px;
+    letter-spacing: normal;
+    color: #232221;
+}
+.section {
+    display: flex;
+    flex-direction: row;
+}
+.advice{
+    margin-left: 5rem;
+    margin-top: 10rem;
+    line-height: 2rem;
+}
+.advantages{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 0.5rem;
+}
+.adv{
+    width: 100px;
+}
+.advantage{
+    font-size: 30px;
+    line-height: 35px;
+    font-family: sofia-pro, sans-serif;
+}
