@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { authProvider } from "@/app/providers/login/loginAPI"
 import './signIn.css';
 const Register = () => {
     const router = useRouter();

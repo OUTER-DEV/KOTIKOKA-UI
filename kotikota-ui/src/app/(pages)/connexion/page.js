@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from "react";
-import { authProvider } from "@/app/providers/login/loginAPI";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
@@ -14,14 +13,16 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+user = {username, password}
     try {
-      await authProvider.login(username, password);
+      
+      await authProvider.login(user);
 
       router.push("/accueil");
     } catch (error) {
       throw(error);
     }
+    
   };
 
   return (
@@ -62,6 +63,13 @@ const Login = () => {
     <img src="/images/signup.webp" alt="sign Up"/>
       </div>
       <div className="_bg"></div>
+
+      <div>
+        #NOTIFICATION
+        <div>
+
+        </div>
+      </div>
     </div>
   );
 };

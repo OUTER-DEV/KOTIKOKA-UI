@@ -6,10 +6,10 @@ const app = axios.create({
     'Content-Type': 'application/json',
   }
 })
-const baseURL = process.env.NEXT_PUBLIC_URL+"/auth"
+const baseURL = process.env.NEXT_PUBLIC_URL
 export const authProvider = {
   createUser: async (username, name, password, email) => {
-    const response = await app.post(baseURL + "/signup", {
+    const response = await app.post(baseURL + "/auth/signup", {
       "username": username,
       "name": name,
       "password": password,
@@ -19,16 +19,15 @@ export const authProvider = {
   },
 
   login: async (username, password) => {
-    const user = await app.post(baseURL + "/login", {
+    const user = app.post(baseURL + "/auth/login", {
       "username": username,
       "password": password
     });
-    console.log(user.data);
     return user.data;
   },
 
   whoami: async (token) => {
-    return app.get(baseURL +"/whoami",{
+    return app.get(baseURL +"/users/whoami",{
       headers:{
         Authorization:"Bearer Token "+token
       }
