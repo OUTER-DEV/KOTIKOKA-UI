@@ -28,22 +28,25 @@ const Register = () => {
       <nav>
           <Link href="/">Go to main</Link>
         </nav>
-
         <div className="container">
-          <h1>
+          <img className="_left" src="/images/b.png"></img>
+          <div className="_right">
+             <h1>
             INSCRIPTION
           </h1>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="nom" name="name" />
+            <input className="_input" type="text" placeholder="Nom" name="name" />
             <br />
-            <input type="text" placeholder="Nom d'utilisateur" name="username" />
+            <input className="_input" type="text" placeholder="Nom d'utilisateur" name="username" />
             <br />
-            <input placeholder="e-mail" type="email" name="email" />
+            <input className="_input" placeholder="E-mail" type="email" name="email" />
             <br />
-            <input type="password" placeholder="mot de" name="password" />
-            <br />
-              <button type="submit">Créer un compte</button>
+            <input className="_input" type="password" placeholder="Mot de passe" name="password" />
+              <button className="_bton" type="submit">Créer un compte</button>
           </form>
+          </div>
+         
+          
           </div>
       </body>
 
