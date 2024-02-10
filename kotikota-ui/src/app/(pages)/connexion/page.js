@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { authProvider } from "@/app/providers/login/loginAPI";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import './page.css'
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -14,35 +17,51 @@ const Login = () => {
 
     try {
       await authProvider.login(username, password);
-      router.push("/home");
+
+      router.push("/accueil");
     } catch (error) {
       console.error(error);
     }
   };
 
   return (
-    <div className="container">
+    <div className="login">
+      <img src="/images/cochon.jpg" alt="pig"></img>
+      <div class="container">
+      <h1>CONNECTEZ-VOUS</h1>
       <form onSubmit={handleSubmit}>
         <label className="username">
-          User name:
+          <label className="_icon"> <FontAwesomeIcon style={{fontSize:"25px"}} icon={faUser}></FontAwesomeIcon></label>
           <input
             type="text"
+            className="_input"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="nom_d_utilisateur"
           />
         </label>
         <label className="password">
-          Mot de passe:
+          <label className="_icon"> <FontAwesomeIcon style={{fontSize:"25px"}} icon={faLock}></FontAwesomeIcon></label>
           <input
             type="password"
+            className="_input"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="password"
           />
         </label>
-        <br />
-        <button type="submit">Envoyer</button>
+        <button type="submit">Se connecter</button>
       </form>
-      <Link href="/register">Go to register</Link>
+      </div>
+
+      <div className="register">
+        <img src="/images/signup.webp" alt="sign Up"/>
+      <Link className="_link" href="/inscription">
+        S'INSCRIRE
+      </Link>
+
+      </div>
+      <div className="_bg"></div>
     </div>
   );
 };
