@@ -34,9 +34,16 @@ body{
     background-color: rgba(0, 0, 0, 0.281);
     border-radius: 6px;
 }
+
+._Logo{
+    margin-top: -10%;
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
 ._bton{
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding: 1vh 0;
     padding-right: 6vh;
     padding-left: 6vh;
     width: 13vw;
@@ -50,7 +57,7 @@ body{
     margin-bottom: 5vh;
     transition: 1s;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
 }
 h1{
     padding-top: 2vh;

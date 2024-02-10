@@ -25,9 +25,12 @@ const Register = () => {
     return (
       <>
       <body>
-      <nav>
-          <Link href="/">Go to main</Link>
-        </nav>
+
+      <Link href="/">
+      <label>
+        <img className="_Logo" src="/images/mainLogo.png"></img>
+      </label></Link>
+  
         <div className="container">
           <img className="_left" src="/images/b.png"></img>
           <div className="_right">

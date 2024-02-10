@@ -24,7 +24,7 @@ export default function Home() {
             <div className="options">
                 <div className="login">
                     <img className="user" src="/images/login.png" alt=""/>
-                    <Link href="/connexion" onClick={document.location.reload}>SE CONNECTER</Link>
+                    <Link href="/connexion" onClick={ document.location.reload}>SE CONNECTER</Link>
                 </div>
                 <div className="search">
                     <img className="research" src="/images/mainSearch.png" alt="research"/>
