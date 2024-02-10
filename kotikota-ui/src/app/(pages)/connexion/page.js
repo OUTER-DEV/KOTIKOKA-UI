@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { authProvider } from "@/app/providers/login/loginAPI";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import './page.css'
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -22,28 +23,42 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="login">
+      <img src="/images/cochon.jpg" alt="pig"></img>
+      <div class="container">
+      <h1>CONNECTEZ-VOUS</h1>
       <form onSubmit={handleSubmit}>
         <label className="username">
-          User name:
+        <p>User name:</p>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder="user_name"
           />
         </label>
         <label className="password">
-          Mot de passe:
+          <p>Mot de passe:</p>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="password"
           />
         </label>
         <br />
-        <button type="submit">Envoyer</button>
+        <button type="submit">Se connecter</button>
       </form>
-      <Link href="/register">Go to register</Link>
+      </div>
+
+      <div className="register">
+        <img src="/images/signup.webp" alt="sign Up"/>
+      <Link href="/register">
+      <p>
+        S'INSCRIRE
+        </p></Link>
+
+      </div>
     </div>
   );
 };
