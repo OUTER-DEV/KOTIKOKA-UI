@@ -23,7 +23,10 @@ export const  MessageProvider = {
         const MyChat = await app.get(baseURL+"/"+userId,{
             headers:
             "Authorization :  Bearer "+ accessToken
-          })
-        return MyChat;
+          }).then((data)=>{
+            return data.data;
+        }).catch((e)=>{
+             throw e;
+    })
     }
 }
