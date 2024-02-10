@@ -1,14 +1,18 @@
+'use client'
+import Navbar from '../components/navbar';
 import '../project/page.css'
 import Buton from './component/buton';
 import Desc from './component/desc';
-import NumberComponent from './component/number';
 import Question from './component/question';
+
+
 
 const ProjectForm = () => {
 
   return (
     <>
-      <div className="project-create">
+      <Navbar/> <br/><br/>
+      <form className="project-create">
         <div className='title-container'>
             <label className="title">Lancez votre projet</label>
             <label className="ktk">sur KOTIKOTA</label>
@@ -67,7 +71,7 @@ const ProjectForm = () => {
             </div> <br/>
             <Buton className="btn" phrase="Envoyer"/>
         </div>
-      </div>
+      </form>
     </>
   );
 };
