@@ -34,13 +34,13 @@ const Home = ()=>{
         </nav>
 
         <div className="titleHeader">
-            <div class="title">
+            <div className="title">
                 <h1>Donnez vie aux rêves</h1>
-                <div class="p1">
+                <div className="p1">
                     <p >Bienvenue sur Kotikota </p>
                 <p >votre plateforme de financement participatif!</p>
                 </div>
-                <div class="p2">
+                <div className="p2">
                     <p>Ensemble, faisons grandir vos projets</p>
                     <p>Joignez-vous à nous et transformons </p>
                     <p>les rêves en réalité.</p>
@@ -53,55 +53,55 @@ const Home = ()=>{
         </div>
     </div>
 
-    <div class="projects">
+    <div className="projects">
         <h2>Nous existons pour aider</h2>
         <span>Voicis quelques projets en cours de notre communauté</span>
     
-    <div class="container">
-        <div class="side">
-            <img class="puzzle" src="/images/build.png" alt="puzzle"/>
-        <div class="description2">
+    <div className="container">
+        <div className="side">
+            <img className="puzzle" src="/images/build.png" alt="puzzle"/>
+        <div className="description2">
             <p>Comme vous pouvez le voir</p>
             <p>Divers types de projets </p>
             <p>Sont soutenus par notre communauté</p>
         </div>
         </div>
         
-        <div class="projectsImg">
-            <div class="img1">
+        <div className="projectsImg">
+            <div className="img1">
               <img src="/images/projects/animals.jpg" alt="animals"/>
               <h3>MyHome</h3>
-              <p class="description">Refuge pour animaux</p>
+              <p className="description">Refuge pour animaux</p>
               <span>Ar 2 2670 000</span>
             </div>
-            <div class="img1">
+            <div className="img1">
               <img src="/images/projects/pianist.jpg" alt="pianist"/>
               <h3>Music Fest</h3>
-              <p class="description">Pianiste en herbe</p>
+              <p className="description">Pianiste en herbe</p>
               <span>Ar 998 000</span>
             </div>
-            <div class="img1">
+            <div className="img1">
               <img src="/images/projects/school.jpg" alt="school"/>
               <h3>123 Success</h3>
-              <p class="description">Ecole "semi-privée"</p>
+              <p className="description">Ecole "semi-privée"</p>
               <span>Ar 10 356 000</span>
             </div>
-             <div class="img1">
+             <div className="img1">
               <img src="/images/projects/resto.jpg" alt="resto"/>
               <h3>Yummy Yummy</h3>
-              <p class="description">Un resto cheap</p>
+              <p className="description">Un resto cheap</p>
               <span>Ar 860 000</span>
             </div> 
-            <div class="img1">
+            <div className="img1">
               <img src="/images/projects/artExpostition.jpg" alt="art"/>
               <h3>Gallery</h3>
-              <p class="description">Exposition d'art contemporain</p>
+              <p className="description">Exposition d'art contemporain</p>
               <span>Ar 4 000 100</span>
             </div> 
-            <div class="img1">
+            <div className="img1">
               <img src="/images/projects/zumba.jpg" alt="Zumba"/>
               <h3>ZUMBATSIKA</h3>
-              <p class="description">Tous en forme!</p>
+              <p className="description">Tous en forme!</p>
               <span>Ar 127 000</span>
             </div>
 

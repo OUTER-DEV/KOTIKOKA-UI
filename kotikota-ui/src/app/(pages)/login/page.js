@@ -1,42 +1,37 @@
 "use client"
-import React, {useState} from "react";
-import { authProvider } from "@/app/providers/login/loginAPI"
+import React, { useState } from "react";
+import { authProvider } from "@/app/providers/login/loginAPI";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-const Login = ()=>{
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    try {
+      await authProvider.login(username, password);
+      router.push("/home");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-    
-    const router = useRouter();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        try {
-          await authProvider.login(username, password);
-          
-          router.push("/home");
-        } catch (error) {
-          console.error(error);
-        }
-      };
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
-        <label>
-          user name:
+        <label className="username">
+          User name:
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
-        <br />
-        <label>
+        <label className="password">
           Mot de passe:
           <input
             type="password"
@@ -47,8 +42,9 @@ const Login = ()=>{
         <br />
         <button type="submit">Envoyer</button>
       </form>
-      <Link href="/register"> Go to register</Link>
+      <Link href="/register">Go to register</Link>
     </div>
   );
-}
+};
+
 export default Login;

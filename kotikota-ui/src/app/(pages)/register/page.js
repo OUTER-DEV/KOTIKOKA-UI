@@ -14,7 +14,7 @@ const Register = () => {
       const password = event.target.elements.password.value;
   
       try {
-        await authProvider.createUser(name, username, email, password);
+        await authProvider.createUser(username,name, password, email);
         router.push("/login");
       } catch (error) {
         console.error(error);
