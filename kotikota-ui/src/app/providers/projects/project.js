@@ -39,6 +39,5 @@ getAll:async (accessToken)=>{
     }).catch((e)=>{
          throw e;
         })
-},
-
+}
 }

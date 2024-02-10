@@ -7,6 +7,7 @@ import Buton from './component/buton';
 import Desc from './component/desc';
 import Question from './component/question';
 import { dataProvider } from "@/app/providers/projects/project";
+import { AuthProvider } from "./context/AuthContext";
 
 const ProjectForm = () => {
   const [title, setTitle] = useState("");
@@ -36,7 +37,9 @@ const ProjectForm = () => {
   };
 
   return (
+
     <>
+    <AuthProvider>    
       <Navbar /> <br/><br/>
       <form className="project-create" onSubmit={handleSubmit}>
         <div className='title-container'>
@@ -100,6 +103,7 @@ const ProjectForm = () => {
           <Buton className="btn" phrase="Envoyer"/>
         </div>
       </form>
+      </AuthProvider>
     </>
   );
 };
