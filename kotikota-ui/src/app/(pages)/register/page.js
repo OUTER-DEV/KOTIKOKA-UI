@@ -1,20 +1,44 @@
 "use client"
-import React, {useState} from "react";
+import React from "react";
 import Link from "next/link";
-const Register = ()=>{
-    const [clicked, setClicked]= useState(false);
-
-    return(
-        <>
+import { useRouter } from "next/navigation";
+import { authProvider } from "@/app/providers/login/loginAPI"
+const Register = () => {
+    const router = useRouter();
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      const name = event.target.elements.name.value;
+      const username = event.target.elements.username.value;
+      const email = event.target.elements.email.value;
+      const password = event.target.elements.password.value;
+  
+      try {
+        await authProvider.createUser(username,name, password, email);
+        router.push("/login");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    return (
+      <>
         <nav>
-             <Link href="/" >Go to main </Link> 
+          <Link href="/">Go to main</Link>
         </nav>
-      
-        <h1> Register here</h1>
-        <input type="text" placeholder="username"></input>
-        <input type="password" placeholder="password"/>
-        <button>Create account</button>
-        </>
-    )
-}
-export default Register;
+        <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="name" name="name" />
+          <br />
+          <input type="text" placeholder="username" name="username" />
+          <br />
+          <input placeholder="email" type="email" name="email" />
+          <br />
+          <input type="password" placeholder="password" name="password" />
+          <br />
+          <button type="submit">Create account</button>
+        </form>
+      </>
+    );
+  };
+  
+  export default Register;

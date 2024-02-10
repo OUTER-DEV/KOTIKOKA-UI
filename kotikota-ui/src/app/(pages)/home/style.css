@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(/images/mainBackground.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    height: 80px;
+    width: 80px;
+}
+
+.options{
+    display: flex;
+    margin-left: 30%;
+    flex-direction: row;
+}
+
+.user{
+    height: 35px;
+    width: 35px;
+
+}
+.research{
+    height: 25px;
+    width: 25px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search input{
+    
+    background-color: rgba(33, 81, 81, 0.459);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fdf7f765;
+    border: none;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-right: 6vh;
+    padding-left: 2vh;
+    border-radius: 5px;
+    margin-left: 1.5vh;
+    margin-right: 2vh;
+}
+.search input::placeholder{
+    color: beige;
+}
+
+.login a{
+    color: rgb(58, 131, 165);
+    text-decoration: none;
+    font-family: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 2vh;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 3vh;
+}
+
+.title{
+    padding-right: 20vh;
+}
+
+
+h1{
+    font-size: 60px;
+    color: rgb(10, 57, 185);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 5vh;
+    margin-top: 6vh;
+}
+
+.p1{
+    font-size: 40px;
+    margin-left: 5vh ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font:bolder;
+    margin-bottom: 4vh;
+}
+
+.p2{
+    font-size: 20px;
+    margin-left: 5vh ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.titleHeader {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.titleHeader img{
+    margin-right: 5vh;
+    margin-top: 10vh;
+    height: 300px;
+    width: 550px;
+    border-top-left-radius: 50px;
+}
+
+.img1 img{
+    
+    height: 120px;
+    width: 200px;
+}
+
+.img1{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: antiquewhite;
+    padding-bottom: 3vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+    transition: 1s;
+}
+
+.projectsImg{
+    margin-top: 10vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.puzzle{
+    height: 280px;
+    width: 480px;
+    border-top-right-radius: 20px;
+    margin-top: 8vh;
+    margin-left: 4vh;
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+    margin-left: 4vh;
+    margin-top: 15vh;
+    color: rgb(10, 57, 185);
+}
+
+span{
+    margin-left: 4vh;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(10, 57, 185);
+    font: bolder;
+}
+
+.img1 p{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img1 span{
+    margin-left: 1vh;
+    color: rgb(88, 87, 87);
+    font-size: 15px;
+    margin-top: 4vh;
+}
+
+.img1:hover{
+    transform: scale(1.1);
+    background-color: rgb(185, 241, 239);
+}
+
+.description2{
+    margin-top: 10vh;
+    margin-left: 8vh;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+._fix{
+    width: 100%;
+    height: 9%;
+    position: fixed;
+    padding-top: 0;
+    margin: 0;
+    background-color: rgba(33, 69, 124, 0.035);
+}
+
+
+._fix {
+    transition: background-color 0.3s ease;
+  }
+  
+  ._fix.scrolled {
+    background-color: #faf8f8; 
+    transition: background-color 0.3s ease;
+  }
+
+._searchText{
+    outline: none;
+    background-color: #fdf7f7;
+}
