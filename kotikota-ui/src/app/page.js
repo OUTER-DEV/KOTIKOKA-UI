@@ -1,7 +1,6 @@
 "use client"
 import React, {useState, useEffect} from "react";
 import "./style.css"
-import { dataProvider } from "@/app/providers/projects/project";
 import Link from "next/link";
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +24,7 @@ export default function Home() {
             <div className="options">
                 <div className="login">
                     <img className="user" src="/images/login.png" alt=""/>
-                    <Link href="/connexion">SE CONNECTER</Link>
+                    <Link href="/connexion" onClick={document.location.reload}>SE CONNECTER</Link>
                 </div>
                 <div className="search">
                     <img className="research" src="/images/mainSearch.png" alt="research"/>

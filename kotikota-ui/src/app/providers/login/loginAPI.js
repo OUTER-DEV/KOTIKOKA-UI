@@ -28,7 +28,7 @@ export const authProvider = {
   },
 
   whoami: async (token) => {
-    return app.get("/whoami",{
+    return app.get(baseURL +"/whoami",{
       headers:{
         Authorization:"Bearer Token "+token
       }

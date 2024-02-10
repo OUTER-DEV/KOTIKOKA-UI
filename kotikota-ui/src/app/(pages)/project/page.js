@@ -7,6 +7,10 @@ import Buton from './component/buton';
 import Desc from './component/desc';
 import Question from './component/question';
 import { dataProvider } from "@/app/providers/projects/project";
+import { AuthContext } from '@/app/providers/authContext/AuthContext';
+import { useContext } from 'react';
+import { useRouter } from 'next/navigation';
+
 
 const ProjectForm = () => {
   const [title, setTitle] = useState("");
@@ -16,6 +20,15 @@ const ProjectForm = () => {
   const [ownerId, setOwnerId] = useState("");
 
   const [category, setCategory] = useState("");
+
+  const { isAuthenticated } = useContext(AuthContext);
+  const router = useRouter();
+  if (!isAuthenticated()) {
+    router.push('/connexion');
+    return null; 
+  }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

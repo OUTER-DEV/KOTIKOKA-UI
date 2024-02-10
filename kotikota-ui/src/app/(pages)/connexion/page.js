@@ -20,14 +20,14 @@ const Login = () => {
 
       router.push("/accueil");
     } catch (error) {
-      console.error(error);
+      throw(error);
     }
   };
 
   return (
     <div className="login">
       <img src="/images/cochon.jpg" alt="pig"></img>
-      <div class="container">
+      <div className="container">
       <h1>CONNECTEZ-VOUS</h1>
       <form onSubmit={handleSubmit}>
         <label className="username">
@@ -55,11 +55,11 @@ const Login = () => {
       </div>
 
       <div className="register">
-        <img src="/images/signup.webp" alt="sign Up"/>
+    
       <Link className="_link" href="/inscription">
         S'INSCRIRE
       </Link>
-
+    <img src="/images/signup.webp" alt="sign Up"/>
       </div>
       <div className="_bg"></div>
     </div>
