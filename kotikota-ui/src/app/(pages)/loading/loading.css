@@ -5,13 +5,14 @@
 }
 body{
     background-image: url(/images/backgroundLogin.png);
+    background-size: cover;
 }
 h1{
     margin-left: 77vh;
     position: absolute;
     top: 20vh;
-    color: rgb(10, 57, 185);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(106, 214, 241);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section{
